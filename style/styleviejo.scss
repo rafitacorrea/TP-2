@@ -1,0 +1,204 @@
+// variables
+@mixin principal-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+@mixin secondary-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+}
+@mixin flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+}
+@mixin task-box {
+    max-width: 100vw;
+    height: 80px;
+    margin: 10px 30px 10px 30px;
+    border-radius: 10px;
+}
+
+// FIN VARIAÑES
+
+body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    margin: 0;
+    padding: 0;
+}
+.new-task {
+    display: none;
+}
+.principal-box-container {
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to bottom right, #ec6687, #da8db9);
+    border-radius: 10px;
+}
+.principal-box-info {
+    @include flex-row;
+}
+.principal-box {
+    color: #fff;
+    padding: 10px;
+    &-text {
+        @include flex-column;
+        flex-wrap: nowrap;
+        padding: 0 10px 0 10px;
+        &-urgent {
+            @include secondary-font;
+        }
+    }
+    &-icon {
+        font-size: 52px;
+        padding-right: 10px;
+    }
+    h1 {
+        @include principal-font;
+    }
+    p {
+        @include secondary-font;
+        margin: 0;
+        padding: 0;
+        padding-right: 40px;
+        font-size: 14px;
+    }
+}
+.urgent {
+    @include secondary-font;
+}
+
+// FIRST-TO-DO-BOX
+.time-bar {
+    width: 100px;
+    height: 5px;
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.fa-check-circle {
+    margin-bottom: 10px;
+}
+.first-to-do-box {
+    @include flex-row;
+    @include task-box;
+    background-image: linear-gradient(to bottom right, #ff6372, #f8ac98);
+    &-info {
+        @include flex-column;
+        @include secondary-font;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    &-title {
+        margin: 0;
+        font-weight: 700;
+    }
+    &-text {
+        margin: 0;
+        margin-left: 10px;
+    }
+    &-icons {
+        @include flex-column;
+        color: #fff;
+        font-size: 16px;
+        margin-left: 40px;
+    }
+}
+.second-to-do-box {
+    @include flex-row;
+    @include task-box;
+    background-image: linear-gradient(to bottom right, #8371e5, #c5a7e2);
+    &-info {
+        @include flex-column;
+        @include secondary-font;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    &-title {
+        margin: 0;
+        font-weight: 700;
+    }
+    &-text {
+        margin: 0;
+        margin-left: 10px;
+    }
+    &-icons {
+        @include flex-column;
+        color: #fff;
+        font-size: 16px;
+        margin-left: 40px;
+    }
+}
+.third-to-do-box {
+    @include flex-row;
+    @include task-box;
+    background-image: linear-gradient(to bottom right, #62d29a, #3bccd0);
+    &-info {
+        @include flex-column;
+        @include secondary-font;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    &-title {
+        margin: 0;
+        font-weight: 700;
+    }
+    &-text {
+        margin: 0;
+        margin-left: 10px;
+    }
+    &-icons {
+        @include flex-column;
+        color: #fff;
+        font-size: 16px;
+        margin-left: 40px;
+    }
+}
+.fourth-to-do-box {
+    @include flex-row;
+    @include task-box;
+    background-image: linear-gradient(to bottom right, #69cee1, #618ee6);
+    &-info {
+        @include flex-column;
+        @include secondary-font;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    &-title {
+        margin: 0;
+        font-weight: 700;
+    }
+    &-text {
+        margin: 0;
+        margin-left: 10px;
+    }
+    &-icons {
+        @include flex-column;
+        color: #fff;
+        font-size: 16px;
+        margin-left: 40px;
+    }
+}
+.important {
+    max-width: 100vw;
+    height: 80px;
+    margin: 0px 10px 0px 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(to top right, #1c8bd6, #37dcd9);
+    position: fixed;
+    bottom: 0;
+    &-text {
+        @include secondary-font;
+    }
+}

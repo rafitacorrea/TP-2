@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>To do list</title>
+        <link rel="stylesheet" type="text/css" href="./style/style.css"">
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+            crossorigin="anonymous"
+        />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="new-task">
+                <div class="new-task-info">
+                        <input type="text" name="title" value="Title">
+                        <input type="text" name="info" value="Info">
+                </div>
+                <div class="new-task-icons">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-trash-alt"></i>
+                </div>
+        </div>
+        <div class="principal-box-container">
+                <div class="principal-box">
+                        <h1>Hi John</h1>
+                        <div class="principal-box-info">
+                            <div class="principal-box-text">
+                                <p>I arrange the tasks you have to do by importance and regularity.</p>
+                            </div>
+                            <div class="principal-box-icon">
+                                <i class="fas fa-plus-square" id="moreButton"></i>
+                            </div>
+                        </div>
+                        <div class="principal-box-new-input" id="principal-box-new-input">
+                            <input
+                              type="text"
+                              placeholder="Nombre de la tarea"
+                              class="newtask"
+                              id="tasktitle"
+                            />
+                            <br />
+                            <textarea
+                              name=""
+                              placeholder="Descripción de la tarea"
+                              cols="30"
+                              rows="2"
+                              id="taskdescription"
+                              class="newtaskdescription"
+                            ></textarea>
+                            <div class="addtask">
+                              <i class="addtask_btn far fa-check-circle" id="confirmButton"></i>
+                            </div>
+                          </div>
+                    </div>
+                   
+        </div>
+
+        <main class="general-tasks">
+            
+            <div class="pendientes" id="pendientes">
+                <h2 class="pendientes-text">Tareas pendientes</h2>
+            </div>
+            <div class="terminadas" id="terminadas">
+                    <h2 class="terminadas-text">Tareas terminadas</h2>
+                </div>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>

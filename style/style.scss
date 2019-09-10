@@ -1,0 +1,131 @@
+// variables
+@mixin principal-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+@mixin secondary-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+}
+@mixin flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+}
+@mixin task-box {
+    max-width: 100vw;
+    height: 80px;
+    margin: 10px 30px 10px 30px;
+    border-radius: 10px;
+}
+
+// FIN VARIABLES
+
+body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    margin: 0;
+    padding: 0;
+}
+.new-task {
+    display: none;
+}
+.principal-box-container {
+    width: 100%;
+    // height: 200px;
+    //background-image: linear-gradient(to bottom right, #ec6687, #da8db9);
+    //border-radius: 10px;
+}
+.principal-box-info {
+    @include flex-row;
+}
+.principal-box {
+    color: #fff;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, #ec6687, #da8db9);
+    border-radius: 10px;
+    overflow: hidden;
+
+    &-text {
+        @include flex-column;
+        flex-wrap: nowrap;
+        padding: 0 10px 0 10px;
+
+        &-urgent {
+            @include secondary-font;
+        }
+    }
+    &-icon {
+        font-size: 52px;
+        padding-right: 10px;
+    }
+    h1 {
+        @include principal-font;
+    }
+    p {
+        @include secondary-font;
+        margin: 0;
+        padding: 0;
+        padding-right: 40px;
+        font-size: 14px;
+    }
+    &-new-input {
+        height: 0px;
+        opacity: 0;
+        transition: height 0.5s;
+    }
+    &-new-input-show {
+        @include flex-column;
+        margin: 0px 15px;
+        height: 115px;
+        opacity: 1;
+    }
+}
+h2 {
+    @include principal-font;
+    margin-left: 20px;
+    color: #000;
+    font-size: 20px;
+}
+// FIRST-TO-DO-BOX
+.fa-check-circle {
+    margin-bottom: 10px;
+}
+.to-do-box {
+    @include flex-row;
+    @include task-box;
+    background-image: linear-gradient(to bottom right, #ff6372, #f8ac98);
+    &-completed {
+        background-image: linear-gradient(to bottom right, #8773f2, #c4a1e7);
+    }
+    &-info {
+        @include flex-column;
+        @include secondary-font;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    &-title {
+        margin: 0;
+        font-weight: 700;
+    }
+    &-text {
+        margin: 0;
+        margin-left: 10px;
+    }
+    &-icons {
+        @include flex-column;
+        color: #fff;
+        font-size: 16px;
+        margin-left: 40px;
+    }
+}

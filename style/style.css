@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+html {
+  margin: 0;
+  padding: 0; }
+
+.new-task {
+  display: none; }
+
+.principal-box-container {
+  width: 100%; }
+
+.principal-box-info {
+  display: flex;
+  justify-content: center;
+  align-items: space-around; }
+
+.principal-box {
+  color: #fff;
+  padding: 10px;
+  background-image: linear-gradient(to bottom right, #ec6687, #da8db9);
+  border-radius: 10px;
+  overflow: hidden; }
+  .principal-box-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    flex-wrap: nowrap;
+    padding: 0 10px 0 10px; }
+    .principal-box-text-urgent {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      color: #fff; }
+  .principal-box-icon {
+    font-size: 52px;
+    padding-right: 10px; }
+  .principal-box h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #fff; }
+  .principal-box p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    padding-right: 40px;
+    font-size: 14px; }
+  .principal-box-new-input {
+    height: 0px;
+    opacity: 0;
+    transition: height 0.5s; }
+  .principal-box-new-input-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    margin: 0px 15px;
+    height: 115px;
+    opacity: 1; }
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  margin-left: 20px;
+  color: #000;
+  font-size: 20px; }
+
+.fa-check-circle {
+  margin-bottom: 10px; }
+
+.to-do-box {
+  display: flex;
+  justify-content: center;
+  align-items: space-around;
+  max-width: 100vw;
+  height: 80px;
+  margin: 10px 30px 10px 30px;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom right, #ff6372, #f8ac98); }
+  .to-do-box-completed {
+    background-image: linear-gradient(to bottom right, #8773f2, #c4a1e7); }
+  .to-do-box-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .to-do-box-title {
+    margin: 0;
+    font-weight: 700; }
+  .to-do-box-text {
+    margin: 0;
+    margin-left: 10px; }
+  .to-do-box-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 40px; }
